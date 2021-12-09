@@ -38,7 +38,6 @@ import Image from "next/image";
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
 import { tooltipOnHover, onMouseEnter } from "../utils/tooltipOnHover";
-import { getMiddlewareRegex } from "next/dist/shared/lib/router/utils";
 
 export const Work = ({
   img,
@@ -172,7 +171,6 @@ export const Work = ({
             {images.map((i, index) => (
               <SwiperSlide key={index}>
                 {getImage(i)}
-                {/* <Image src={i} className="image" width={2067} height={1253} /> */}
               </SwiperSlide>
             ))}
           </Swiper>{" "}
