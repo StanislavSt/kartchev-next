@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Flat compression shirt day version",
+    "id": "sticker_logo",
+    "description": "Show off your Snipcart support with a logo sticker!",
+    "price": "2.00",
+    "image": "/products/day_front.jpg",
+    "custom1-name": "Size",
+    "custom1-options": "Small|Medium|Large",
+    "url": "https://stefankartchev.netlify.app/products.json"
+  },
+  {
+    "title": "Flat compression shirt night version",
+    "id": "sticker_logo_pack",
+    "description": "Get a pack of 3 Snipcart logo stickers.",
+    "price": "4.00",
+    "image": "/products/night_front.jpg",
+    "custom1-options": "Small|Medium|Large",
+    "custom1-name": "Size",
+    "url": "https://stefankartchev.netlify.app/products.json"
+  }
+]
