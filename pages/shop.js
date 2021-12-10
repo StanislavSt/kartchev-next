@@ -24,7 +24,7 @@ export default function Shop() {
           playsInline
           controls
         >
-          <source src={"./video/karthecv-campaign.webm"} />
+          <source src={"./video/karthecv-campaign.mp4"} />
         </video>
         {paused ? (
           <div className="video-overlay" onClick={() => handleOnClick()}>

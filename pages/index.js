@@ -64,7 +64,7 @@ function App() {
       <div className="middle">
         <Work
           images={["/images/selective_memory.jpg"]}
-          video={"./video/selective_memory_in_motion02.webm"}
+          video={"./video/selective_memory_in_motion02.mp4"}
           header="Selective Memory"
           content="Part of group show « Casting the Runes » curated by Arthur Poujois"
           location="2021 - London, United Kingdom"
