@@ -4,32 +4,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const imageMap = {
   miscible: {
-    height: "1435",
-    width: "2362",
+    height: "2870",
+    width: "4724",
   },
   ambivalence: {
-    height: "1596",
-    width: "2126",
+    height: "3192",
+    width: "4252",
   },
   dismorphiya: {
-    height: "2160",
-    width: "1728",
+    height: "4320",
+    width: "3456",
   },
   luxus: {
-    height: "2088",
-    width: "2953",
+    height: "4176",
+    width: "5906",
   },
   rest: {
-    height: "1435",
-    width: "2362",
+    height: "2870",
+    width: "4724",
   },
   fear: {
-    height: "1253",
-    width: "2067",
+    height: "2506",
+    width: "4134",
   },
   selective: {
-    height: "1253",
-    width: "2067",
+    height: "2506",
+    width: "4134",
   },
 };
 
@@ -169,9 +169,7 @@ export const Work = ({
               </SwiperSlide>
             ) : null}
             {images.map((i, index) => (
-              <SwiperSlide key={index}>
-                {getImage(i)}
-              </SwiperSlide>
+              <SwiperSlide key={index}>{getImage(i)}</SwiperSlide>
             ))}
           </Swiper>{" "}
         </div>
