@@ -1,10 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
-// import dayFront from '../images/day_front.jpg'
-// import dayBack from '../images/day_back.jpg'
-// import nightFront from '../images/night_front.jpg'
-// import nightBack from '../images/night_back.jpg'
+import {
+  Magnifier,
+  GlassMagnifier,
+  SideBySideMagnifier,
+  PictureInPictureMagnifier,
+  MOUSE_ACTIVATION,
+  TOUCH_ACTIVATION,
+} from "react-image-magnifiers";
 
 export default function Product({ pp, id }) {
   const [products, setProducts] = useState(null);
@@ -13,7 +16,6 @@ export default function Product({ pp, id }) {
 
   //   const [backImage,setBackImage] = useState(dayFront)
 
-  console.log(pp);
   const handleOnClick = (e) => {
     setSelected(e.target.textContent);
     setShowDropdown(false);
@@ -33,22 +35,27 @@ export default function Product({ pp, id }) {
   }, []);
 
   return (
-    <div key={pp.id}>
+    <div key={pp.id} style={{ marginTop: "50px" }}>
       <div className="product-container">
         <div className="image-container">
-          <img
+          {/* <img
             src={`.${pp.image}`}
             alt={`Preview of ${pp.title}`}
             className="product-image"
-          />
-        </div>
-
-        <div className="product-description">
-          <h3>Tight-Fit Long-Sleeve Folk Top</h3>
+          /> */}
+          <div className="img-container">
+            <GlassMagnifier
+              imageSrc={`.${pp.image}`}
+              imageAlt="Example"
+              magnifierSize={"35%"}
+            />
+          </div>
+          <div className="product-description">
+            <h3>{pp.title}</h3>
             <div>
               <p>
                 <a style={{ fontWeight: "900", color: "white" }}>Colour:</a>{" "}
-                White
+                {pp.color}
               </p>
               <p>
                 <a style={{ fontWeight: "900", color: "white" }}>
@@ -60,58 +67,66 @@ export default function Product({ pp, id }) {
               <p>Sublimation print technology.</p> <p>Produced in Bulgaria.</p>
               <p style={{ fontWeight: "900", color: "white" }}>€{pp.price}</p>
             </div>
-          <div className="dropdown-container">
-            <div
-              className="dropdown-header"
-              onClick={() => setShowDropdown(!showDropdown)}
-            >
-              <span>{selected}</span>
-            </div>
-            {showDropdown ? (
-              <span className="select-box--arrow-up"></span>
-            ) : (
-              <span className="select-box--arrow-down"></span>
-            )}
-
-            {showDropdown ? (
-              <div className="dropdown-list">
-                {products
-                  ? products.variants.map((x, index) => {
-                      return (
-                        <div
-                          onClick={handleOnClick}
-                          className={x.stock <= 0 ? "soldOut" : null}
-                          key={index}
-                        >
-                          {x.variation[0].option}
-                        </div>
-                      );
-                    })
-                  : null}
+            <div className="dropdown-container">
+              <div
+                className="dropdown-header"
+                onClick={() => setShowDropdown(!showDropdown)}
+              >
+                <span>{selected}</span>
               </div>
-            ) : null}
-          </div>
+              {showDropdown ? (
+                <span className="select-box--arrow-up"></span>
+              ) : (
+                <span className="select-box--arrow-down"></span>
+              )}
 
-          <p>
-            <button
-              style={{ width: "205px", height: "40px" }}
-              className={
-                selected === "Size"
-                  ? "snipcart-add-item selectSize"
-                  : "snipcart-add-item"
-              }
-              data-item-url="https://stefankartchev.netlify.app/products.json"
-              data-item-id={pp.id}
-              data-item-image={pp.image}
-              data-item-name={pp.title}
-              data-item-price={pp.price}
-              data-item-custom1-name="Size"
-              data-item-custom1-options="Small|Medium|Large"
-              data-item-custom1-value={selected}
-            >
-              Add to Cart
-            </button>
-          </p>
+              {showDropdown ? (
+                <div className="dropdown-list">
+                  {products
+                    ? products.variants.map((x, index) => {
+                        return (
+                          <div
+                            onClick={handleOnClick}
+                            className={x.stock <= 0 ? "soldOut" : null}
+                            key={index}
+                          >
+                            {x.variation[0].option}
+                          </div>
+                        );
+                      })
+                    : null}
+                </div>
+              ) : null}
+            </div>
+
+            <p>
+              <button
+                style={{ width: "205px", height: "40px" }}
+                className={
+                  selected === "Size"
+                    ? "snipcart-add-item selectSize"
+                    : "snipcart-add-item"
+                }
+                data-item-url="https://kartchev.studio/products.json"
+                data-item-id={pp.id}
+                data-item-image={pp.image}
+                data-item-name={pp.title}
+                data-item-price={pp.price}
+                data-item-custom1-name="Size"
+                data-item-custom1-options="Small|Medium|Large"
+                data-item-custom1-value={selected}
+              >
+                Add to Cart
+              </button>
+            </p>
+          </div>
+          <div className="img-container">
+            <GlassMagnifier
+              imageSrc={`.${pp.image2}`}
+              imageAlt="Example"
+              magnifierSize={"35%"}
+            />
+          </div>
         </div>
       </div>
     </div>
