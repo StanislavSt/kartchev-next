@@ -47,7 +47,9 @@ export default function Product({ pp, id }) {
             <GlassMagnifier
               imageSrc={`.${pp.image}`}
               imageAlt="Example"
-              magnifierSize={"35%"}
+              magnifierSize={"55%"}
+              square
+              magnifierBorderSize={"0"}
             />
           </div>
           <div className="product-description">
@@ -124,7 +126,9 @@ export default function Product({ pp, id }) {
             <GlassMagnifier
               imageSrc={`.${pp.image2}`}
               imageAlt="Example"
-              magnifierSize={"35%"}
+              magnifierSize={"55%"}
+              square
+              magnifierBorderSize={"0"}
             />
           </div>
         </div>
