@@ -66,8 +66,8 @@ function App() {
           images={["/images/selective_memory.jpg"]}
           video={"./video/selective_memory_in_motion02.mp4"}
           header="Selective Memory"
-          content="Part of group show « Casting the Runes » curated by Arthur Poujois"
-          location="2021 - London, United Kingdom"
+          content="Part of the group show 'Casting The Runes' curated by Arthur Poujois. Hosted by Harlesden High Street in partnership with Underground Flower."
+          location="2021 - London, UK"
         />
 
         <Work
@@ -77,8 +77,8 @@ function App() {
             "/images/fear_foliage3.jpg",
           ]}
           header="Fear the foliage"
-          content="Print Design and Development for Digital Fashion Film for Digital Village"
-          location="2020 - Metaverse"
+          content="Print Design and Development for Digital Film directed by Shayli Harrison for 'Digital Village'"
+          location="2020 - The Metaverse"
           credits="Credits: Shayli Harrison"
         />
 
@@ -138,9 +138,9 @@ function App() {
             "/images/ambivalence06.jpg",
           ]}
           header="Ambivalence"
-          content="Visuals on holographic display: Sam Rolfes"
+          content="Diploma Graduation Collection Holographic visuals by Sam Rolfes"
           location="2018 - Antwerp, Belgium"
-          credits="Photo credits: Zlatimir Arakliev (photoshoot pics),  Etienne Todoir - Catwalkpictures (show pics) "
+          credits="Photo credits: Zlatimir Arakliev, Etienne Todoir"
         />
 
         <Work
@@ -154,7 +154,7 @@ function App() {
           header="Miscible Displacement"
           content="Bachelor collection"
           location="2016 - Antwerp, Belgium"
-          credits="Photo credits: Kiko"
+          credits="Photo credits: Kiril Dimitrov"
         />
       </div>
 

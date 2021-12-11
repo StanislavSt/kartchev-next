@@ -154,6 +154,9 @@ export const Work = ({
             onClick={() => swiper.slideNext()}
             loop
           >
+            {images.map((i, index) => (
+              <SwiperSlide key={index}>{getImage(i)}</SwiperSlide>
+            ))}
             {video ? (
               <SwiperSlide key={1234}>
                 <div>
@@ -168,9 +171,6 @@ export const Work = ({
                 </div>
               </SwiperSlide>
             ) : null}
-            {images.map((i, index) => (
-              <SwiperSlide key={index}>{getImage(i)}</SwiperSlide>
-            ))}
           </Swiper>{" "}
         </div>
       ) : null}

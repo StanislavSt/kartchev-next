@@ -13,7 +13,7 @@ export default function Product({ pp, id }) {
 
   //   const [backImage,setBackImage] = useState(dayFront)
 
-  console.log(pp)
+  console.log(pp);
   const handleOnClick = (e) => {
     setSelected(e.target.textContent);
     setShowDropdown(false);
@@ -21,22 +21,19 @@ export default function Product({ pp, id }) {
 
   useEffect(async () => {
     const secret = process.env.NEXT_PUBLIC_SNIPCART_API;
-    const request = await fetch(
-      `https://app.snipcart.com/api/products/${id}`,
-      {
-        headers: {
-          Authorization: `Basic ${btoa(secret)}`,
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      }
-    );
+    const request = await fetch(`https://app.snipcart.com/api/products/${id}`, {
+      headers: {
+        Authorization: `Basic ${btoa(secret)}`,
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
     const products = await request.json();
     setProducts(products);
   }, []);
 
   return (
-    <div key={pp.id} style={{ width: "50%" }}>
+    <div key={pp.id}>
       <div className="product-container">
         <div className="image-container">
           <img
@@ -47,10 +44,22 @@ export default function Product({ pp, id }) {
         </div>
 
         <div className="product-description">
-          <h3>{pp.title}</h3>
-          <p>{pp.description}</p>
-          <p>€{pp.price}</p>
-
+          <h3>Tight-Fit Long-Sleeve Folk Top</h3>
+            <div>
+              <p>
+                <a style={{ fontWeight: "900", color: "white" }}>Colour:</a>{" "}
+                White
+              </p>
+              <p>
+                <a style={{ fontWeight: "900", color: "white" }}>
+                  {" "}
+                  Composition:
+                </a>{" "}
+                93% PES 7% ELAST.
+              </p>
+              <p>Sublimation print technology.</p> <p>Produced in Bulgaria.</p>
+              <p style={{ fontWeight: "900", color: "white" }}>€{pp.price}</p>
+            </div>
           <div className="dropdown-container">
             <div
               className="dropdown-header"
@@ -67,7 +76,7 @@ export default function Product({ pp, id }) {
             {showDropdown ? (
               <div className="dropdown-list">
                 {products
-                  ? products.variants.map((x,index) => {
+                  ? products.variants.map((x, index) => {
                       return (
                         <div
                           onClick={handleOnClick}
@@ -85,6 +94,7 @@ export default function Product({ pp, id }) {
 
           <p>
             <button
+              style={{ width: "205px", height: "40px" }}
               className={
                 selected === "Size"
                   ? "snipcart-add-item selectSize"

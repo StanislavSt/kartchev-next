@@ -51,6 +51,7 @@ a {
 }
 .logo-img {
   width: 20vw;
+  min-width: 150px;
   cursor: pointer;
   align-self: flex-end;
 }
@@ -227,6 +228,7 @@ textarea {
   justify-content: center;
 }
 .dropdown-list {
+  display: block;
   margin-top: 1px;
   border: 3px solid white;
   width: 200px;
@@ -240,6 +242,7 @@ textarea {
 
 .dropdown-container {
   position: relative;
+  max-width: 200px;
   font-weight: 900;
   color: white;
   cursor: pointer;
@@ -247,8 +250,8 @@ textarea {
 
 .select-box--arrow-down {
   position: absolute;
-  top: 18px;
-  right: 190px;
+  top: 40%;
+  right: 8%;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -258,8 +261,8 @@ textarea {
 
 .select-box--arrow-up {
   position: absolute;
-  top: 18px;
-  right: 190px;
+  top: 10%;
+  right: 8%;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
@@ -283,7 +286,7 @@ textarea {
 }
 .soldOut {
   text-decoration: line-through;
-  color: grey;
+  color: rgb(84, 72, 72);
   pointer-events: none;
 }
 .selectSize {
@@ -311,6 +314,9 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
+.product-description {
+  color: white;
+}
 
 @media only screen and (max-width: 1100px) {
   .content-large {
@@ -328,4 +334,35 @@ textarea {
     font-size: 35px;
     color: black;
   }
+
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-container{
+    display: flex;
+    justify-content: center;
+  }
+  .image-container img {
+    width: 90%;
+  }
+  .product-description{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }  
 }
