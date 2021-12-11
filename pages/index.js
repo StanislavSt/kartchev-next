@@ -61,9 +61,8 @@ function App() {
             "/images/fear_foliage3.jpg",
           ]}
           header="Fear the foliage"
-          content="Print Design and Development for Digital Film directed by Shayli Harrison for 'Digital Village'"
+          content="Print Design and Development for Digital Film directed by Shayli Harrison for Digital Village"
           location="2020 - The Metaverse"
-          credits="Credits: Shayli Harrison"
         />
 
         <Work
@@ -144,11 +143,11 @@ function App() {
 
       <div className={logoClass}>
         <Shake
-          h={5}
-          v={5}
-          r={20}
-          dur={300}
-          int={10}
+          h={0}
+          v={100}
+          r={0}
+          dur={530}
+          int={54.8}
           max={100}
           fixed={true}
           fixedStop={false}

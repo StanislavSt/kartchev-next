@@ -184,7 +184,10 @@ export const Work = ({
         <div className="contentt" style={{ textAlign: "left" }}>
           {location}
         </div>
-        <div className="contentt" style={{ textAlign: "left" }}>
+        <div
+          className="contentt"
+          style={{ textAlign: "left", fontSize: "25px" }}
+        >
           {credits}
         </div>
       </div>
