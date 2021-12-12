@@ -63,7 +63,7 @@ export default function Product({ pp, id }) {
                 <a style={{ fontWeight: "900", color: "white" }}>
                   {" "}
                   Composition:
-                </a>{" "}
+                </a>
                 93% PES 7% ELAST.
               </p>
               <p>Sublimation print technology.</p> <p>Produced in Bulgaria.</p>
