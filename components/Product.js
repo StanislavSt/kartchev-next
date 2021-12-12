@@ -16,11 +16,45 @@ export default function Product({ pp, id }) {
 
   //   const [backImage,setBackImage] = useState(dayFront)
 
+  const variants = [
+    {
+      stock: 11,
+      variation: [
+        {
+          name: "Size",
+          option: "Small",
+        },
+      ],
+      allowOutOfStockPurchases: false,
+    },
+    {
+      stock: 5,
+      variation: [
+        {
+          name: "Size",
+          option: "Medium",
+        },
+      ],
+      allowOutOfStockPurchases: false,
+    },
+    {
+      stock: 12,
+      variation: [
+        {
+          name: "Size",
+          option: "Large",
+        },
+      ],
+      allowOutOfStockPurchases: false,
+    },
+  ];
+
   const handleOnClick = (e) => {
     setSelected(e.target.textContent);
+    console.log(e.target.textContent);
     setShowDropdown(false);
   };
-
+  console.log("secletd is", selected);
   useEffect(async () => {
     const secret = process.env.NEXT_PUBLIC_SNIPCART_API;
     const request = await fetch(`https://app.snipcart.com/api/products/${id}`, {
@@ -31,6 +65,7 @@ export default function Product({ pp, id }) {
       },
     });
     const products = await request.json();
+    console.log(products);
     setProducts(products);
   }, []);
 
@@ -49,7 +84,7 @@ export default function Product({ pp, id }) {
               imageAlt="Example"
               magnifierSize={"55%"}
               square
-              magnifierBorderSize={"0"}
+              magnifierBorderSize={0}
             />
           </div>
           <div className="product-description">
@@ -85,7 +120,7 @@ export default function Product({ pp, id }) {
               {showDropdown ? (
                 <div className="dropdown-list">
                   {products
-                    ? products.variants.map((x, index) => {
+                    ? variants.map((x, index) => {
                         return (
                           <div
                             onClick={handleOnClick}
@@ -110,7 +145,7 @@ export default function Product({ pp, id }) {
                     : "snipcart-add-item"
                 }
                 data-item-url="https://kartchev.studio/products.json"
-                data-item-id={pp.id}
+                data-item-id={"folk_top_black"}
                 data-item-image={pp.image}
                 data-item-name={pp.title}
                 data-item-price={pp.price}
@@ -128,7 +163,7 @@ export default function Product({ pp, id }) {
               imageAlt="Example"
               magnifierSize={"55%"}
               square
-              magnifierBorderSize={"0"}
+              magnifierBorderSize={0}
             />
           </div>
         </div>
