@@ -9,7 +9,7 @@
     "color": "White",
     "custom1-name": "Size",
     "custom1-options": "Small|Medium|Large",
-    "url": "https://kartchev.studio/products.json"
+    "url": "https://kartchev.studio/folk_top_white.json"
   },
   {
     "title": "Tight-Fit Long-Sleeve Folk Top",
@@ -21,6 +21,6 @@
     "color": "Black",
     "custom1-options": "Small|Medium|Large",
     "custom1-name": "Size",
-    "url": "https://kartchev.studio/products.json"
+    "url": "https://kartchev.studio/folk_top_black.json"
   }
 ]
