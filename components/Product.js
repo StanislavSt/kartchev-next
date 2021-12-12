@@ -145,7 +145,7 @@ export default function Product({ pp, id }) {
                     : "snipcart-add-item"
                 }
                 data-item-url="https://kartchev.studio/products.json"
-                data-item-id={"folk_top_black"}
+                data-item-id={pp.id}
                 data-item-image={pp.image}
                 data-item-name={pp.title}
                 data-item-price={pp.price}
