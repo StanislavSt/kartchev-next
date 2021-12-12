@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 
 // import videoItem from "../video/karthecv-campaign.webm";
 import { useRef, useState } from "react";
@@ -29,12 +30,9 @@ export default function Shop() {
           rel="stylesheet"
           href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css"
         />
-        <script
-          async
-          src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"
-        ></script>
       </Head>
       <div className="big-image" style={{ cursor: "pointer" }}>
+        <Script  src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js" />
         <div
           id="snipcart"
           data-config-modal-style="side"
