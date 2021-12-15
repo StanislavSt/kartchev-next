@@ -44,7 +44,25 @@ a {
 .swip-container {
   margin-top: -10px;
   cursor: pointer;
+  position: relative;
   /* max-width: 100%; */
+}
+.links-container {
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  gap: 1.5rem;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.links-container a {
+  color: #fb00e8;
+  background-color: black;
+}
+.links-container a:hover {
+  opacity: 0.5;
 }
 .video {
   width: 108%;
@@ -384,5 +402,8 @@ textarea {
   .image-container {
     flex-direction: column;
     align-items: center;
+  }
+  .links-container {
+    font-size: 12px;
   }
 }

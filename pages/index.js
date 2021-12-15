@@ -52,6 +52,11 @@ function App() {
           header="Selective Memory"
           content="Part of the group show 'Casting The Runes' curated by Arthur Poujois. Hosted by Harlesden High Street in partnership with Underground Flower."
           location="2021 - London, UK"
+          linksObject={[
+            ["https://www.arthurpoujois.com/", "arthur poujois"],
+            ["http://undergroundflower.com/about.html", "underground flower"],
+            ["https://www.sova-audio.co.uk/", "sova audio"],
+          ]}
         />
 
         <Work
@@ -63,6 +68,10 @@ function App() {
           header="Fear the foliage"
           content="Print Design and Development for Digital Film directed by Shayli Harrison for Digital Village"
           location="2020 - The Metaverse"
+          linksObject={[
+            ["https://mutani.io/", "mutani"],
+            ["https://digitalvillage.io/", "digital village"],
+          ]}
         />
 
         <Work
@@ -82,6 +91,10 @@ function App() {
                   "
           location="2020 - Rome, Italy"
           credits="Photo credits: Cristian Cocurullo"
+          linksObject={[
+            ["https://stedelijkstudies.com/michele-rizzo-rest-2021/", "michele rizzo"],
+            ["https://quadriennale2020.com/en/artist/rizzo/", "quadriennale di roma 2020"],
+          ]}
         />
 
         <Work
@@ -97,6 +110,10 @@ function App() {
           content="Print design and development for Annemarie Šarić. MoMu Award winner"
           location="2020 - Antwerp, Belgium"
           credits="Photo credits: Lee Wei"
+          linksObject={[
+            ["https://www.momu.be/en/magazine/momu-award2020", "momu award annemarie saric"],
+            ["https://www.sweeriouslee.com/", "lee wei"],
+          ]}
         />
 
         <Work
@@ -108,6 +125,9 @@ function App() {
           header="DYSMORPHIA Heels"
           content="Design development and production follow up for ROMBAUT"
           location="2019 - Paris, France"
+          linksObject={[
+            ["https://rombautparis.com/", "rombaut"],
+          ]}
         />
 
         <Work
@@ -124,6 +144,10 @@ function App() {
           content="Diploma Graduation Collection Holographic visuals by Sam Rolfes"
           location="2018 - Antwerp, Belgium"
           credits="Photo credits: Zlatimir Arakliev, Etienne Todoir"
+          linksObject={[
+            ["https://www.instagram.com/zlatimirarakliev/?hl=en", "zlatimir arakliev"],
+            ["https://rolfes.team/", "sam rolfes"],
+          ]}
         />
 
         <Work

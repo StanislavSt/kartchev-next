@@ -1,6 +1,11 @@
 // Import Swiper React components
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+import { tooltipOnHover, onMouseEnter } from "../utils/tooltipOnHover";
 
 const imageMap = {
   miscible: {
@@ -33,12 +38,6 @@ const imageMap = {
   },
 };
 
-import Image from "next/image";
-
-// Import Swiper styles
-import "swiper/swiper-bundle.css";
-import { tooltipOnHover, onMouseEnter } from "../utils/tooltipOnHover";
-
 export const Work = ({
   img,
   images,
@@ -47,6 +46,10 @@ export const Work = ({
   location,
   credits,
   video,
+  ambVideo1,
+  ambVideo2,
+  ambImages,
+  linksObject,
 }) => {
   const [swiper, setSwiper] = useState(null);
   const clientY = useRef(null);
@@ -59,11 +62,8 @@ export const Work = ({
   useEffect(() => {
     const clearEvents = () => {
       window.removeEventListener("mousemove", onMouseMove);
-      // window.removeEventListener('wheel', onScrollMove)
     };
     window.addEventListener("mousemove", onMouseMove);
-    // window.addEventListener('wheel', onScrollMove)
-
     return () => clearEvents();
   }, []);
 
@@ -116,10 +116,12 @@ export const Work = ({
     if (name.includes("selective"))
       return (
         <Image
+          loading="eager"
           className="dot"
           src={name}
           width={imageMap.selective.width}
           height={imageMap.selective.height}
+          priority
         />
       );
     if (name.includes("fear"))
@@ -129,6 +131,7 @@ export const Work = ({
           src={name}
           width={imageMap.fear.width}
           height={imageMap.fear.height}
+          priority
         />
       );
   };
@@ -149,13 +152,23 @@ export const Work = ({
           <Swiper
             onInit={(e) => setSwiper(e)}
             slidesPerView={1}
-            onSwiper={(swiper) => {}}
-            onSlideChange={() => {}}
             onClick={() => swiper.slideNext()}
             loop
           >
             {images.map((i, index) => (
-              <SwiperSlide key={index}>{getImage(i)}</SwiperSlide>
+              <SwiperSlide key={index}>
+                {getImage(i)}{" "}
+                <div className="links-container">
+                  {linksObject
+                    ? linksObject.map((item, index) => (
+                        <a href={item[0]}>
+                          {item[1]}{" "}
+                          {index + 1 < linksObject.length ? "|" : null}
+                        </a>
+                      ))
+                    : null}
+                </div>
+              </SwiperSlide>
             ))}
             {video ? (
               <SwiperSlide key={1234}>
@@ -174,8 +187,12 @@ export const Work = ({
           </Swiper>{" "}
         </div>
       ) : null}
+
       <div className="content-large">
-        <div className="header" style={{ textAlign: "left" }}>
+        <div
+          className="header"
+          style={{ textAlign: "left", fontWeight: "900" }}
+        >
           {header}
         </div>
         <div className="contentt" style={{ textAlign: "left" }}>
