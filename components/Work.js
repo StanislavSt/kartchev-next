@@ -168,6 +168,11 @@ export const Work = ({
                       ))
                     : null}
                 </div>
+                <div className="text-scroll-container">
+                  <section className="news-message">
+                    <div>{header + " " + content + " " + location}</div>
+                  </section>
+                </div>
               </SwiperSlide>
             ))}
             {video ? (

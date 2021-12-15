@@ -352,12 +352,27 @@ textarea {
   justify-content: center;
 }
 
+/* Text scroll*/
+/* section {
+  color: white;
+  text-transform: uppercase;
+  background: url("https://miro.medium.com/max/1200/1*ztSApL7_eqwEjv1YgEynMA.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  height: 100vh;
+} */
+.text-scroll-container {
+  display: none;
+}
 @media only screen and (max-width: 1100px) {
   .content-large {
     display: none;
   }
   .content-small {
-    display: block;
+    display: none;
     padding-bottom: 1.5rem;
     margin: 0.2rem 0;
     font-size: 15px;
@@ -405,5 +420,47 @@ textarea {
   }
   .links-container {
     font-size: 12px;
+  }
+  .text-scroll-container {
+    color:white;
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    font-size: 8px;
+    right: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+
+  .news-message {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    animation: slide-left 20s linear infinite;
+    font-family: impact, sans-serif;
+    background: none;
+  }
+
+  @keyframes slide-left {
+    from {
+      -webkit-transform: translateX(120%);
+      transform: translateX(120%);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+  .news-message div {
+    justify-self: flex-end;
+    font-size: 2.5em;
+    font-weight: 100;
+    padding-left: 0.5em;
   }
 }

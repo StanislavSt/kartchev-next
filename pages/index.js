@@ -55,7 +55,7 @@ function App() {
           linksObject={[
             ["https://www.arthurpoujois.com/", "arthur poujois"],
             ["http://undergroundflower.com/about.html", "underground flower"],
-            ["https://www.sova-audio.co.uk/", "sova audio"],
+            // ["https://www.sova-audio.co.uk/", "sova audio"],
           ]}
         />
 
