@@ -161,7 +161,7 @@ export const Work = ({
                 <div className="links-container">
                   {linksObject
                     ? linksObject.map((item, index) => (
-                        <a href={item[0]}>
+                        <a href={item[0]} key={index}>
                           {item[1]}{" "}
                           {index + 1 < linksObject.length ? "|" : null}
                         </a>
