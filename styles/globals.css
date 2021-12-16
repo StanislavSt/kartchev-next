@@ -433,6 +433,7 @@ textarea {
     font-size: 12px;
   }
   .text-scroll-container {
+    z-index: 999;
     color: white;
     display: block;
     position: absolute;
@@ -460,8 +461,8 @@ textarea {
 
   @keyframes slide-left {
     from {
-      -webkit-transform: translateX(120%);
-      transform: translateX(120%);
+      -webkit-transform: translateX(190%);
+      transform: translateX(190%);
     }
     to {
       -webkit-transform: translateX(-100%);
