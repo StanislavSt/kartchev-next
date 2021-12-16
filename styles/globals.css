@@ -58,8 +58,8 @@ a {
   width: 100%;
 }
 .links-container a {
-  color: #fb00e8;
-  background-color: black;
+  color: #00ff4e;
+  /* background-color: black; */
 }
 .links-container a:hover {
   opacity: 0.5;
@@ -397,6 +397,9 @@ textarea {
 }
 
 @media only screen and (max-width: 1200px) {
+  .links-container{
+    display: none;
+  }
   .img-container-mobile {
     display: block;
   }
@@ -433,14 +436,14 @@ textarea {
     color: white;
     display: block;
     position: absolute;
-    bottom: 3px;
-    font-size: 8px;
+    font-size: 5px;
+    bottom: 0;
     right: 10px;
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
     width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
     overflow: hidden;
   }
 

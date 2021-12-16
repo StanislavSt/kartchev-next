@@ -167,9 +167,12 @@ export const Work = ({
                 <div className="links-container">
                   {linksObject
                     ? linksObject.map((item, index) => (
-                        <a href={item[0]} key={index}>
+                        <a
+                          href={item[0]}
+                          key={index}
+                          style={{ marginRight: "10px" }}
+                        >
                           {item[1]}{" "}
-                          {index + 1 < linksObject.length ? "|" : null}
                         </a>
                       ))
                     : null}
@@ -224,7 +227,6 @@ export const Work = ({
                         ? linksObject.map((item, index) => (
                             <a href={item[0]} key={index}>
                               {item[1]}{" "}
-                              {index + 1 < linksObject.length ? "|" : null}
                             </a>
                           ))
                         : null}
