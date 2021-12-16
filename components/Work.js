@@ -179,7 +179,21 @@ export const Work = ({
                 </div>
                 <div className="text-scroll-container">
                   <section className="news-message">
-                    <div>{header + " " + content + " " + location}</div>
+                    <div>
+                      <a
+                        style={{
+                          color: "#fb00e8",
+                          fontFamily: "'Orbitron', sans-serif",
+                          fontStyle: "italic",
+                          fontWeight: "700",
+                          fontSize: "15px",
+                        }}
+                      >
+                        {header}
+                      </a>{" "}
+                      <a style={{ color: "white" }}>{content}</a>{" "}
+                      <a style={{ color: "white" }}>{location}</a>
+                    </div>
                   </section>
                 </div>
               </SwiperSlide>
