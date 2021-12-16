@@ -369,6 +369,9 @@ textarea {
 .text-scroll-container {
   display: none;
 }
+.video2 {
+  width: 134%;
+}
 @media only screen and (max-width: 1100px) {
   .content-large {
     display: none;
@@ -450,10 +453,6 @@ textarea {
     animation: slide-left 20s linear infinite;
     font-family: impact, sans-serif;
     background: none;
-  }
-  .mobile-swiper-container {
-    width: 580;
-    height: 630;
   }
 
   @keyframes slide-left {

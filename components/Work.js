@@ -46,9 +46,8 @@ export const Work = ({
   location,
   credits,
   video,
-  ambVideo1,
-  ambVideo2,
-  ambImages,
+  video2,
+  images2,
   linksObject,
 }) => {
   const [swiper, setSwiper] = useState(null);
@@ -72,6 +71,7 @@ export const Work = ({
       return (
         <Image
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.luxus.width}
           height={imageMap.luxus.height}
@@ -81,6 +81,7 @@ export const Work = ({
       return (
         <Image
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.miscible.width}
           height={imageMap.miscible.height}
@@ -90,6 +91,7 @@ export const Work = ({
       return (
         <Image
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.ambivalence.width}
           height={imageMap.ambivalence.height}
@@ -99,6 +101,7 @@ export const Work = ({
       return (
         <Image
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.dismorphiya.width}
           height={imageMap.dismorphiya.height}
@@ -109,6 +112,7 @@ export const Work = ({
         <Image
           src={name}
           className="dot"
+          alt={name}
           width={imageMap.rest.width}
           height={imageMap.rest.height}
         />
@@ -118,6 +122,7 @@ export const Work = ({
         <Image
           loading="eager"
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.selective.width}
           height={imageMap.selective.height}
@@ -128,10 +133,11 @@ export const Work = ({
       return (
         <Image
           className="dot"
+          alt={name}
           src={name}
           width={imageMap.fear.width}
           height={imageMap.fear.height}
-          priority
+          loading="eager"
         />
       );
   };
@@ -179,6 +185,11 @@ export const Work = ({
               <SwiperSlide key={1234}>
                 <div>
                   <video
+                    style={
+                      video === "/video/sam_rolfes.mp4"
+                        ? { width: "134%" }
+                        : null
+                    }
                     className="video dot"
                     src={video}
                     type="video/mp4"
@@ -189,6 +200,43 @@ export const Work = ({
                 </div>
               </SwiperSlide>
             ) : null}
+            {video2 ? (
+              <SwiperSlide key={12345}>
+                <div>
+                  <video
+                    className="video dot video2"
+                    src={video2}
+                    type="video/mp4"
+                    autoPlay
+                    loop
+                    muted
+                  />
+                </div>
+              </SwiperSlide>
+            ) : null}
+
+            {images2
+              ? images2.map((i, index) => (
+                  <SwiperSlide key={index + "aa"}>
+                    {getImage(i)}{" "}
+                    <div className="links-container">
+                      {linksObject
+                        ? linksObject.map((item, index) => (
+                            <a href={item[0]} key={index}>
+                              {item[1]}{" "}
+                              {index + 1 < linksObject.length ? "|" : null}
+                            </a>
+                          ))
+                        : null}
+                    </div>
+                    <div className="text-scroll-container">
+                      <section className="news-message">
+                        <div>{header + " " + content + " " + location}</div>
+                      </section>
+                    </div>
+                  </SwiperSlide>
+                ))
+              : null}
           </Swiper>{" "}
         </div>
       ) : null}

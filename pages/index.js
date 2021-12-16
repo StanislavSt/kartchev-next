@@ -92,8 +92,14 @@ function App() {
           location="2020 - Rome, Italy"
           credits="Photo credits: Cristian Cocurullo"
           linksObject={[
-            ["https://stedelijkstudies.com/michele-rizzo-rest-2021/", "michele rizzo"],
-            ["https://quadriennale2020.com/en/artist/rizzo/", "quadriennale di roma 2020"],
+            [
+              "https://stedelijkstudies.com/michele-rizzo-rest-2021/",
+              "michele rizzo",
+            ],
+            [
+              "https://quadriennale2020.com/en/artist/rizzo/",
+              "quadriennale di roma 2020",
+            ],
           ]}
         />
 
@@ -111,7 +117,10 @@ function App() {
           location="2020 - Antwerp, Belgium"
           credits="Photo credits: Lee Wei"
           linksObject={[
-            ["https://www.momu.be/en/magazine/momu-award2020", "momu award annemarie saric"],
+            [
+              "https://www.momu.be/en/magazine/momu-award2020",
+              "momu award annemarie saric",
+            ],
             ["https://www.sweeriouslee.com/", "lee wei"],
           ]}
         />
@@ -125,9 +134,7 @@ function App() {
           header="DYSMORPHIA Heels"
           content="Design development and production follow up for ROMBAUT"
           location="2019 - Paris, France"
-          linksObject={[
-            ["https://rombautparis.com/", "rombaut"],
-          ]}
+          linksObject={[["https://rombautparis.com/", "rombaut"]]}
         />
 
         <Work
@@ -135,17 +142,23 @@ function App() {
             "/images/ambivalenceBG.jpg",
             "/images/ambivalence01.jpg",
             "/images/ambivalence02.jpg",
+          ]}
+          images2={[
             "/images/ambivalence03.jpg",
             "/images/ambivalence04.jpg",
-            "/images/ambivalence05.jpg",
             "/images/ambivalence06.jpg",
           ]}
+          video={"/video/sam_rolfes.mp4"}
+          video2={"/video/sam_rolfes2.mp4"}
           header="Ambivalence"
           content="Diploma Graduation Collection Holographic visuals by Sam Rolfes"
           location="2018 - Antwerp, Belgium"
           credits="Photo credits: Zlatimir Arakliev, Etienne Todoir"
           linksObject={[
-            ["https://www.instagram.com/zlatimirarakliev/?hl=en", "zlatimir arakliev"],
+            [
+              "https://www.instagram.com/zlatimirarakliev/?hl=en",
+              "zlatimir arakliev",
+            ],
             ["https://rolfes.team/", "sam rolfes"],
           ]}
         />
@@ -157,7 +170,7 @@ function App() {
             "/images/miscibledisplacement02.jpg",
             "/images/miscibledisplacement03.jpg",
           ]}
-          video={"./video/miscible.mp4"}
+          video={"/video/miscible.mp4"}
           header="Miscible Displacement"
           content="Bachelor collection"
           location="2016 - Antwerp, Belgium"
