@@ -1,13 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-  Magnifier,
-  GlassMagnifier,
-  SideBySideMagnifier,
-  PictureInPictureMagnifier,
-  MOUSE_ACTIVATION,
-  TOUCH_ACTIVATION,
-} from "react-image-magnifiers";
+import { GlassMagnifier } from "react-image-magnifiers";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 
 export default function Product({ pp, id }) {
   const [products, setProducts] = useState(null);
@@ -86,6 +82,22 @@ export default function Product({ pp, id }) {
               square
               magnifierBorderSize={0}
             />
+          </div>
+          <div className="img-container-mobile">
+            <Swiper
+              preventClicks
+              Product
+              slidesPerView={1}
+              loop
+              style={{ width: "370px", height: "360px" }}
+            >
+              <SwiperSlide>
+                <Image src={pp.image} layout="fill" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image src={pp.image2} layout="fill" />
+              </SwiperSlide>
+            </Swiper>{" "}
           </div>
           <div className="product-description">
             <h3>{pp.title}</h3>
