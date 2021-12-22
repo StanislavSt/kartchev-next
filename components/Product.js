@@ -12,45 +12,10 @@ export default function Product({ pp, id }) {
 
   //   const [backImage,setBackImage] = useState(dayFront)
 
-  const variants = [
-    {
-      stock: 11,
-      variation: [
-        {
-          name: "Size",
-          option: "Small",
-        },
-      ],
-      allowOutOfStockPurchases: false,
-    },
-    {
-      stock: 5,
-      variation: [
-        {
-          name: "Size",
-          option: "Medium",
-        },
-      ],
-      allowOutOfStockPurchases: false,
-    },
-    {
-      stock: 12,
-      variation: [
-        {
-          name: "Size",
-          option: "Large",
-        },
-      ],
-      allowOutOfStockPurchases: false,
-    },
-  ];
-
   const handleOnClick = (e) => {
     setSelected(e.target.textContent);
-    console.log(e.target.textContent);
     setShowDropdown(false);
   };
-  console.log("secletd is", selected);
   useEffect(async () => {
     const secret = process.env.NEXT_PUBLIC_SNIPCART_API;
     const request = await fetch(`https://app.snipcart.com/api/products/${id}`, {
@@ -61,7 +26,6 @@ export default function Product({ pp, id }) {
       },
     });
     const products = await request.json();
-    console.log(products);
     setProducts(products);
   }, []);
 
@@ -132,7 +96,7 @@ export default function Product({ pp, id }) {
               {showDropdown ? (
                 <div className="dropdown-list">
                   {products
-                    ? variants.map((x, index) => {
+                    ? products.variants.map((x, index) => {
                         return (
                           <div
                             onClick={handleOnClick}

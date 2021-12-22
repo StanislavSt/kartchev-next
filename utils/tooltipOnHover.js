@@ -56,13 +56,6 @@ export const onMouseEnter = (e) => {
   }
 };
 
-// export const onScroll = (e, clientY) => {
-//     // console.log(e.layerY)
-//     // if ($target) {
-//     //     $target.style.top = e.layerY - offset.top + tipDist + "px";
-//     //     $target.style.left = e.layerX - offset.left + tipDist + "px";
-//     // }
-// }
 const clearTooltips = () => {
   var content = document.getElementsByClassName("content-large");
   for (var i = 0; i < content.length; i++) {
