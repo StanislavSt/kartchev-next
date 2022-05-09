@@ -66,18 +66,15 @@ export default function Product({ pp, id }) {
           <div className="product-description">
             <h3>{pp.title}</h3>
             <div>
-              <p>
-                <a style={{ fontWeight: "900", color: "white" }}>Colour:</a>{" "}
-                {pp.color}
-              </p>
-              <p>
-                <a style={{ fontWeight: "900", color: "white" }}>
-                  {" "}
-                  Composition:
-                </a>
-                93% PES 7% ELAST.
-              </p>
-              <p>Sublimation print technology.</p> <p>Produced in Bulgaria.</p>
+              <div style={{ fontSize: "12px" }}>
+                <p>
+                  <a style={{ fontWeight: "900", color: "white" }}>Colour:</a>{" "}
+                  {pp.color}
+                </p>
+                <p>93% PES 7% ELAST</p>
+                <p>Sublimation print</p> <p>Produced in Bulgaria</p>
+              </div>
+
               <p style={{ fontWeight: "900", color: "white" }}>€{pp.price}</p>
             </div>
             <div className="dropdown-container">
@@ -85,13 +82,8 @@ export default function Product({ pp, id }) {
                 className="dropdown-header"
                 onClick={() => setShowDropdown(!showDropdown)}
               >
-                <span>{selected}</span>
+                <span style={{ fontSize: "14px" }}>{selected}</span>
               </div>
-              {showDropdown ? (
-                <span className="select-box--arrow-up"></span>
-              ) : (
-                <span className="select-box--arrow-down"></span>
-              )}
 
               {showDropdown ? (
                 <div className="dropdown-list">
@@ -111,10 +103,9 @@ export default function Product({ pp, id }) {
                 </div>
               ) : null}
             </div>
-
             <p>
               <button
-                style={{ width: "205px", height: "40px" }}
+                style={{ width: "205px", height: "40px", fontSize: "14px" }}
                 className={
                   selected === "Size"
                     ? "snipcart-add-item selectSize"
@@ -129,8 +120,14 @@ export default function Product({ pp, id }) {
                 data-item-custom1-options="Small|Medium|Large"
                 data-item-custom1-value={selected}
               >
-                Pre Order
+                Pre-order
               </button>
+            </p>
+            <p
+              style={{ fontStyle: "italic", fontSize: "10px", width: "205px" }}
+            >
+              Pre-order Ordering is open until May 31st. Distribution begins
+              effectively on June 21st. For further questions please contact us.
             </p>
           </div>
           <div className="img-container">
