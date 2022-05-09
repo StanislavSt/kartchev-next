@@ -129,7 +129,7 @@ export default function Product({ pp, id }) {
                 data-item-custom1-options="Small|Medium|Large"
                 data-item-custom1-value={selected}
               >
-                Add to Cart
+                Pre Order
               </button>
             </p>
           </div>
