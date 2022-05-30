@@ -126,8 +126,8 @@ export default function Product({ pp, id }) {
             <p
               style={{ fontStyle: "italic", fontSize: "10px", width: "205px" }}
             >
-              Ordering is open until May 31st. Distribution begins effectively
-              on June 21st. For further questions please contact us.
+              Ordering is extended until June 6th. Distribution begins
+              effectively end of June. For further questions please contact us.
             </p>
           </div>
           <div className="img-container">
