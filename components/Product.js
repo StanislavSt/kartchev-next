@@ -107,9 +107,10 @@ export default function Product({ pp, id }) {
               <button
                 style={{ width: "205px", height: "40px", fontSize: "14px" }}
                 className={
-                  selected === "Size"
-                    ? "snipcart-add-item selectSize"
-                    : "snipcart-add-item"
+                  "selectSize snipcart-add-item"
+                  // selected === "Size"
+                  //   ? "snipcart-add-item selectSize"
+                  //   : "snipcart-add-item"
                 }
                 data-item-url="https://kartchev.studio/products.json"
                 data-item-id={pp.id}
@@ -120,14 +121,13 @@ export default function Product({ pp, id }) {
                 data-item-custom1-options="Small|Medium|Large"
                 data-item-custom1-value={selected}
               >
-                Pre-order
+                Sold Out
               </button>
             </p>
             <p
               style={{ fontStyle: "italic", fontSize: "10px", width: "205px" }}
             >
-              Ordering is extended until June 6th. Distribution begins
-              effectively end of June. For further questions please contact us.
+              Ordering has been closed.
             </p>
           </div>
           <div className="img-container">
