@@ -92,7 +92,8 @@ export default function Product({ pp, id }) {
                         return (
                           <div
                             onClick={handleOnClick}
-                            className={x.stock <= 0 ? "soldOut" : null}
+                            // className={x.stock <= 0 ? "soldOut" : null}
+                            className={"soldOut"}
                             key={index}
                           >
                             {x.variation[0].option}
