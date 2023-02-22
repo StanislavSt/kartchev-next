@@ -46,6 +46,12 @@ function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="middle">
+      <Work
+          images={["/images/colombe.jpg"]}
+          header="Kartchev x Colombe D'Humieres"
+          content="PFW23 SHOWROOM"
+          location="06.03.23 - 11.03.23"
+        />
         <Work
           images={["/images/selective_memory.jpg"]}
           video={"./video/selective_memory_in_motion02.mp4"}
