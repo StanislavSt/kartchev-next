@@ -164,9 +164,10 @@ export const Work = ({
           >
             {video3 ? (
               <SwiperSlide key={1234}>
-                <div>
+                <div >
                   <video
                     className="video dot"
+                    style={{width:'115%'}}
                     src={video3}
                     type="video/mp4"
                     autoPlay
