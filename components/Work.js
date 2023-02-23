@@ -129,7 +129,7 @@ export const Work = ({
           priority
         />
       );
-    if (name.includes("fear") || name.includes('colombe'))
+    if (name.includes("fear") || name.includes('colombe') || name.includes('indepth') || name.includes('cybersix'))
       return (
         <Image
           className="dot"

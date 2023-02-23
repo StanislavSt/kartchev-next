@@ -52,6 +52,30 @@ function App() {
           content="PFW23 SHOWROOM"
           location="06.03.23 - 11.03.23"
         />
+
+        <Work
+          images={["/images/cybersix1.jpg","/images/cybersix3.jpg"]}
+          video={"./video/cyber_6_railer_mp4.mp4"}
+          header="The Antwerp Cyber-Six"
+          content="Personal archive designs and accessories digitized by Mutani in collaboration with iord50.Studio"
+          credits="Other designs by: Brandon Wen, Flora Miranda, Maximilian Rittler, Nadav Perlman, Shayli Harrison and Stefan Kartchev"
+          location="2023 - The Metaverse"
+          linksObject={[
+            ["https://www.mutani.io/", "Mutani"],
+            ["https://ior50.com/", "ior50.studio"],
+          ]}
+        />
+        <Work
+          images={["/images/indepth1.jpg","/images/indepth2.jpg","/images/indepth3.jpg"]}
+          header="In-Depth"
+          content="Performative installation by Gaëtan Rusquet and Damien Petitot"
+          credits="Set design in collaboration with Gaëtan Rusquet presented at Bozar"
+          location="2022 Brussels, Belgium"
+          linksObject={[
+            ["https://www.damienpetitot.com/", "Damien Petitot"],
+            ["https://hiros.be/en/project/in-depth/", "Gaetan Rusquet"],
+          ]}
+        />
         <Work
           images={["/images/selective_memory.jpg"]}
           video={"./video/selective_memory_in_motion02.mp4"}
