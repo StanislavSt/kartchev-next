@@ -54,8 +54,8 @@ function App() {
         />
 
         <Work
-          images={["/images/cybersix1.jpg","/images/cybersix3.jpg"]}
-          video={"./video/cyber_6_railer_mp4.mp4"}
+          images={["/images/cybersix3.jpg","/images/cybersix1.jpg"]}
+          video3={"./video/cyber_6_railer_mp4.mp4"}
           header="The Antwerp Cyber-Six"
           content="Personal archive designs and accessories digitized by Mutani in collaboration with iord50.Studio"
           credits="Other designs by: Brandon Wen, Flora Miranda, Maximilian Rittler, Nadav Perlman, Shayli Harrison and Stefan Kartchev"

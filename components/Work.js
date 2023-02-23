@@ -47,6 +47,7 @@ export const Work = ({
   credits,
   video,
   video2,
+  video3,
   images2,
   linksObject,
 }) => {
@@ -161,6 +162,20 @@ export const Work = ({
             onClick={() => swiper.slideNext()}
             loop
           >
+            {video3 ? (
+              <SwiperSlide key={1234}>
+                <div>
+                  <video
+                    className="video dot"
+                    src={video3}
+                    type="video/mp4"
+                    autoPlay
+                    loop
+                    muted
+                  />
+                </div>
+              </SwiperSlide>
+            ) : null}
             {images.map((i, index) => (
               <SwiperSlide key={index}>
                 {getImage(i)}{" "}
