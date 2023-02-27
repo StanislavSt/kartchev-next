@@ -48,9 +48,8 @@ function App() {
       <div className="middle">
       <Work
           images={["/images/colombe.jpg"]}
-          header="Kartchev x Colombe D'Humieres"
-          content="PFW23 SHOWROOM"
-          location="06.03.23 - 11.03.23"
+          header="PFW A/W23 SHOWROOM"
+          location="05.03.23 - 08.03.23"
         />
 
         <Work
