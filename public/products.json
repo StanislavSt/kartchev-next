@@ -41,8 +41,8 @@
     "price": "170",
     "image": "/images/capsule_red_1.png",
     "image2": "/images/capsule_red_2.png",
-    "custom2-name": "Size",
-    "custom2-options": "XS|S|M",
+    "custom1-name": "Size",
+    "custom1-options": "XS|S|M",
     "url": "https://kartchev.studio/capsule_red.json"
   }
 ]

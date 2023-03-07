@@ -113,7 +113,7 @@ export default function Product({ pp, id }) {
                 data-item-name={pp.title}
                 data-item-price={pp.price}
                 data-item-custom1-name="Size"
-                data-item-custom1-options="Small|Medium|Large"
+                data-item-custom1-options="XS|S|M"
                 data-item-custom1-value={selected}
               >
                 Acquire
