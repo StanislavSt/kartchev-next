@@ -102,7 +102,7 @@ export default function Product({ pp, id }) {
               <button
                 style={{ width: "205px", height: "40px", fontSize: "14px" }}
                 className={
-                  "selectSize snipcart-add-item"
+                  "snipcart-add-item"
                   // selected === "Size"
                   //   ? "snipcart-add-item selectSize"
                   //   : "snipcart-add-item"
