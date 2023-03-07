@@ -86,8 +86,7 @@ export default function Product({ pp, id }) {
                         return (
                           <div
                             onClick={handleOnClick}
-                            // className={x.stock <= 0 ? "soldOut" : null}
-                            className={"soldOut"}
+                            className={x.stock <= 0 ? "soldOut" : null}
                             key={index}
                           >
                             {x.variation[0].option}
@@ -106,7 +105,6 @@ export default function Product({ pp, id }) {
                   // selected === "Size"
                   //   ? "snipcart-add-item selectSize"
                   //   : "snipcart-add-item"
-                  
                 }
                 data-item-url="https://kartchev.studio/products.json"
                 data-item-id={pp.id}
