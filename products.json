@@ -15,12 +15,36 @@
     "title": "Tight-Fit Long-Sleeve Folk Top",
     "id": "folk_top_black",
     "description": "Get a pack of 3 Snipcart logo stickers.",
-    "price": "150", 
+    "price": "150",
     "image": "/images/night_front.jpg",
     "image2": "/images/night_back.jpg",
     "color": "Black",
     "custom1-options": "Small|Medium|Large",
     "custom1-name": "Size",
     "url": "https://kartchev.studio/folk_top_black.json"
+  },
+  {
+    "title": "Capsule A/W 2023",
+    "id": "capsule_purple",
+    "description": "Trip Top Collaborative piece with Colombe D’Humieres",
+    "price": "170",
+    "image": "/images/capsule_purple_1.png",
+    "image2": "/images/capsule_purple_2.png",
+    "custom2-options": "XS|S|M",
+    "custom2-name": "Size",
+    "sizeOnModel":"S",
+    "url": "https://kartchev.studio/capsule_purple.json"
+  },
+  {
+    "title": "Capsule A/W 2023",
+    "id": "capsule_red",
+    "description": "Trip Top Collaborative piece with Colombe D’Humieres",
+    "price": "170",
+    "image": "/images/capsule_red_1.png",
+    "image2": "/images/capsule_red_2.png",
+    "custom2-options": "XS|S|M",
+    "custom2-name": "Size",
+    "sizeOnModel":"XS",
+    "url": "https://kartchev.studio/capsule_red.json"
   }
 ]

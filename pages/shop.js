@@ -4,6 +4,7 @@ import Script from "next/script";
 // import videoItem from "../video/karthecv-campaign.webm";
 import { useRef, useState } from "react";
 import Product from "../components/Product";
+import Product2 from "../components/Product2";
 import products from "../products.json";
 
 export default function Shop() {
@@ -31,14 +32,19 @@ export default function Shop() {
           href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css"
         />
       </Head>
-      <div className="big-image" style={{ cursor: "pointer" }}>
-        <Script  src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js" />
+      <div className="big-image">
+        <Script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js" />
         <div
           id="snipcart"
           data-config-modal-style="side"
           data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API2}
           hidden
         ></div>
+        <div className="products-container">
+          {products.slice(2, 4).map((product) => (
+            <Product2 pp={product} id={product.id} key={product.id} />
+          ))}
+        </div>
         <video
           ref={vidRef}
           loop
@@ -55,7 +61,7 @@ export default function Shop() {
         ) : null} */}
       </div>
       <div className="products-container">
-        {products.map((product) => (
+        {products.slice(0, 2).map((product) => (
           <Product pp={product} id={product.id} key={product.id} />
         ))}
       </div>
