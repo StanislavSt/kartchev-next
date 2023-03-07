@@ -5,7 +5,7 @@
     "price": "170",
     "image": "/images/capsule_purple_1.png",
     "image2": "/images/capsule_purple_2.png",
-    "custom2-options": "XS|S|M",
     "custom2-name": "Size",
+    "custom2-options": "XS|S|M",
     "url": "https://kartchev.studio/capsule_purple.json"
   }
