@@ -8,7 +8,7 @@
     "image2": "/images/day_back.jpg",
     "color": "White",
     "custom1-name": "Size",
-    "custom1-options": "Small|Medium|Large",
+    "custom1-options": "XS|S|M",
     "url": "https://kartchev.studio/folk_top_white.json"
   },
   {
@@ -19,7 +19,7 @@
     "image": "/images/night_front.jpg",
     "image2": "/images/night_back.jpg",
     "color": "Black",
-    "custom1-options": "Small|Medium|Large",
+    "custom1-options": "XS|S|M",
     "custom1-name": "Size",
     "url": "https://kartchev.studio/folk_top_black.json"
   },
