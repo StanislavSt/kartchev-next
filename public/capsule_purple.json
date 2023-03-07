@@ -1,0 +1,11 @@
+{
+    "title": "Capsule A/W 2023",
+    "id": "capsule_purple",
+    "description": "Stretch raglan top with continuous collar",
+    "price": "170",
+    "image": "/images/capsule_purple_1.png",
+    "image2": "/images/capsule_purple_2.png",
+    "custom1-options": "XS|S|M",
+    "custom1-name": "Size",
+    "url": "https://kartchev.studio/capsule_purple.json"
+  }
